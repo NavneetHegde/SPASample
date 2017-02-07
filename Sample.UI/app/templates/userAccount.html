@@ -1,0 +1,16 @@
+﻿<div class="span6">
+    <h1 class="page-header">User Account List</h1>
+
+    <a ng-click="createNewAccount()" class="btn btn-info">create new user account</a>
+    <p />
+    <div class="list-group" ng-repeat="account in userAccounts">
+        <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">{{account.Name}}</h4>
+            <p class="list-group-item-text"><span>Address :</span>{{account.Address}}</p>
+            <p class="list-group-item-text"><span>Email :</span>{{account.Email}}</p>
+            <p class="list-group-item-text"><span>Postal :</span>{{account.Postal}}</p>
+            <span ng-click="editUserAccount(account.Id)" class="badge">edit</span>
+            <span ng-click="deleteUserAccount(account.Id)" class="badge">delete</span>
+        </a>
+    </div>
+</div>
